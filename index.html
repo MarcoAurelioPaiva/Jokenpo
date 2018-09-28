@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			.square {
+				border: 4px solid black;
+				padding-top:20px;
+				padding-bottom: 20px;
+				padding-left: :20px;
+				padding-right: :20px;
+			}
+
+			.space{
+				border
+			}
+
+
+
+		</style>
+		
+	</head>
+	<body>
+		<table align="Center" style="border-spacing: 60px">
+			<tr class="space" style="padding: 80px">
+				<td id="option1" class="square" align="Center" style="padding-left: 20px" style="padding-right: 20px">
+					Sua opção.
+				</td>
+				<td id="result" class="square" align="Center" style="padding-left: 20px" style="padding-right: 20px">
+					Vencedor é...
+				</td>
+				<td id="option2" class="square" align="Center" style="padding-left: 20px" style="padding-right: 20px">
+					Opção do Computador.
+				</td>
+			</tr>
+			<tr>
+				<td align="Center">
+					<button id="pedra" onclick="jogar(1)" >
+						Pedra
+					</button>
+				</td>
+				<td align="Center">
+					<button id="papel" onclick="jogar(2)" >
+						Papel
+					</button>
+				</td>
+				<td align="Center">
+					<button id="tesoura" onclick="jogar(3)" >
+						Tesoura
+					</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+	<script type="text/javascript">
+		function jogar(opcao) {
+			var computador;
+			computador = Math.floor(Math.random() * 3) + 1;
+
+			switch(opcao){
+
+				case 1:
+					if (computador == 1) {
+							document.getElementById("option1").innerHTML = "Pedra";
+							document.getElementById("result").innerHTML = "Empate";
+							document.getElementById("option2").innerHTML = "Pedra";
+					}else {
+						if (computador == 2) {
+							document.getElementById("option1").innerHTML = "Pedra";
+							document.getElementById("result").innerHTML = "Perdeu";
+							document.getElementById("option2").innerHTML = "Papel";
+						}else{
+							if (computador == 3) {
+							document.getElementById("option1").innerHTML = "Pedra";
+							document.getElementById("result").innerHTML = "Ganhou";
+							document.getElementById("option2").innerHTML = "Tesoura";
+							}
+						 }
+						}
+									 
+					break;
+				case 2:
+					if (computador == 1) {
+							document.getElementById("option1").innerHTML = "Papel";
+							document.getElementById("result").innerHTML = "Ganhou";
+							document.getElementById("option2").innerHTML = "Pedra";
+					}else {
+						if (computador == 2) {
+							document.getElementById("option1").innerHTML = "Papel";
+							document.getElementById("result").innerHTML = "Empate";
+							document.getElementById("option2").innerHTML = "Papel";
+						}else{
+							if (computador == 3) {
+							document.getElementById("option1").innerHTML = "Papel";
+							document.getElementById("result").innerHTML = "Perdeu";
+							document.getElementById("option2").innerHTML = "Tesoura";
+							}
+						 }
+						}
+									 
+					break;
+
+					case 3:
+					if (computador == 1) {
+							document.getElementById("option1").innerHTML = "Tesoura";
+							document.getElementById("result").innerHTML = "Perdeu";
+							document.getElementById("option2").innerHTML = "Pedra";
+					}else {
+						if (computador == 2) {
+							document.getElementById("option1").innerHTML = "Tesoura";
+							document.getElementById("result").innerHTML = "Ganhou";
+							document.getElementById("option2").innerHTML = "Papel";
+						}else{
+							if (computador == 3) {
+							document.getElementById("option1").innerHTML = "Tesoura";
+							document.getElementById("result").innerHTML = "Empate";
+							document.getElementById("option2").innerHTML = "Tesoura";
+							}
+						 }
+						}
+									 
+					break;
+				
+		}
+
+					}	
+
+		
+	</script>
+</html>
